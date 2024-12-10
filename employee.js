@@ -13,17 +13,21 @@ let work = Math.floor(Math.random() * 3);
 
 let hoursWorked;
 
-if (work === 0) {
-  hoursWorked = noTime;
-  console.log("Employee did not work today.");
-} 
-else if (work === 1) {
-  hoursWorked = partTime;
-  console.log("Employee worked Part-Time today.");
-} 
-else if (work === 2) {
-  hoursWorked = fullTime;
-  console.log("Employee worked Full-Time today.");
+switch (work) {
+  case 0:
+    hoursWorked = noTime;
+    console.log("Employee did not work today.");
+    break;
+  
+  case 1:
+    hoursWorked = partTime;
+    console.log("Employee did part time work today.");
+    break;
+
+  case 2:
+    hoursWorked = fullTime;
+    console.log("Employee did full time work today.");
+    break;
 }
 
 
